@@ -4,9 +4,10 @@
   "description": "Repo for testing Node.js features and Design Patterns.",
   "main": "index.js",
   "scripts": {
+    "start": "node -r esm src/main.js",
+    "dev": "nodemon -r esm src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/toschivictor/nodejs-playground.git"
@@ -16,11 +17,19 @@
   "bugs": {
     "url": "https://github.com/toschivictor/nodejs-playground/issues"
   },
+  "esm": {
+    "cjs": true
+  },
   "homepage": "https://github.com/toschivictor/nodejs-playground#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.15"
   },
   "devDependencies": {
+    "eslint": "^7.1.0",
+    "nodemon": "^2.0.4",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1"
   }
